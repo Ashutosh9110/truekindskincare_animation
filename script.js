@@ -38,4 +38,35 @@ document.addEventListener("DOMContentLoaded", () => {
       )
     }
   })
+  
+  tl.to(".spinner", {
+    opacity: 0,
+    duration: 0.3
+  })
+
+  tl.to(".word h1", {
+    y: "0%",
+    duration: 1
+  }, 
+  "<"
+)
+
+  tl.to(".divider", {
+    scaleY: "100%",
+    duration: 1,
+    onComplete: () => 
+      gsap.to(".divider", { opacity: 0, duration: 0.4, delay: 0.3  })  
+  })
+
+  tl.to("#word-1 h1", {
+    y: "100%",
+    duration: 1,
+    delay: 0.3
+  })
+
+  tl.to("#world-2", {
+    y: "-100%",
+    duration: 1
+  }, "<")
+
 });
